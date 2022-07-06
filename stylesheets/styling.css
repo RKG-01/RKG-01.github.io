@@ -34,7 +34,7 @@
 
 .background {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) 
-                        ,url("images/GradientBGToyota.jpg");
+                        ,url("/images/GradientBGToyota.jpg");
     background-color: rgb(15, 15, 15);
     background-size: cover;
     background-position: center center;
@@ -48,7 +48,7 @@
 
 .section2 {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))
-                        ,url("images/Screenshot_as_bmw_m3_g80_highforce_28-3-122-19-52-29.jpg");
+                        ,url("/images/Screenshot_as_bmw_m3_g80_highforce_28-3-122-19-52-29.jpg");
     background-color: rgb(15, 15, 15);
     background-size: cover;
     background-position: center center;
