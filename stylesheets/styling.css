@@ -46,18 +46,6 @@
     width: 100%;
 }
 
-.section2 {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))
-                        ,url("/images/Screenshot_as_bmw_m3_g80_highforce_28-3-122-19-52-29.jpg");
-    background-color: rgb(15, 15, 15);
-    background-size: cover;
-    background-position: center center;
-    height: 50%;
-    position:absolute;
-    width: 99%;
-    display: table-cell;
-}
-
 em{
     color: rgb(24, 92, 218);
     font-style:normal;
