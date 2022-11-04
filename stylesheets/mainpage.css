@@ -10,30 +10,30 @@
     padding-right: 2vw;
 }
 
+.mainsection{
+    position:relative; /*To center the section*/
+    display: flex; /*Create the flexbox*/
+    flex-direction: column; /*To create the flexbox's vertical layout.*/
+    align-items: center; /*To align the content vertically*/
+    justify-content: center; /*To align the content horizontally*/
+    width:100vw; /*Self-Explanatory*/
+    height:100vh; /*Self-Explanatory*/
+    background-repeat: no-repeat; /*To not tile the background*/
+    background-position: center; /*To keep the background centered*/
+    background-size: cover; /*Type of background, to cover the entire section*/
+    background-image: url('/svg/blob-scene-haikei.svg'); /*Background*/
+    aspect-ratio: 19, 9; /*Aspect Ratio of Background*/
+    font-size: xx-large;/*Font Sizee*/
+    font-family: 'Major Mono Display', monospace;/*Font Style*/
+    color: white;/*Font Colour*/
+    }
+
 .body{
     margin: 0;
     font-family: 'JetBrains Mono', monospace;
     color: rgb(120, 120, 120);
     background-color:rgb(20, 20, 20);
     overflow-x: hidden;
-}
-
-.mainsection{
-position:relative; /*To center the section*/
-display: flex; /*Create the flexbox*/
-flex-direction: column; /*To create the flexbox's vertical layout.*/
-align-items: center; /*To align the content vertically*/
-justify-content: center; /*To align the content horizontally*/
-width:100vw; /*Self-Explanatory*/
-height:100vh; /*Self-Explanatory*/
-background-repeat: no-repeat; /*To not tile the background*/
-background-position: center; /*To keep the background centered*/
-background-size: cover; /*Type of background, to cover the entire section*/
-background-image: url('/svg/blob-scene-haikei.svg'); /*Background*/
-aspect-ratio: 19, 9; /*Aspect Ratio of Background*/
-font-size: xx-large;/*Font Sizee*/
-font-family: 'Major Mono Display', monospace;/*Font Style*/
-color: white;/*Font Colour*/
 }
 
 .transition{
