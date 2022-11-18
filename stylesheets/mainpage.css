@@ -86,7 +86,7 @@
 
 /* Design for Mobile first */
 /* Design For Desktop Below */
-@media screen and (min-width: 500px){
+@media screen and (min-width: 600px){
     
 .mainsection{
     /* text-align: left; */
