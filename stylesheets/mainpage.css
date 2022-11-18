@@ -8,9 +8,11 @@
     font-family: 'JetBrains Mono', monospace; 
     padding-left: 2vw;
     padding-right: 2vw;
+    text-align: center;
 }
 
 .mainsection{
+    text-align: center;
     position:relative; /*To center the section*/
     display: flex; /*Create the flexbox*/
     flex-direction: column; /*To create the flexbox's vertical layout.*/
@@ -58,6 +60,7 @@
     font-family: 'JetBrains Mono', monospace;
     font-weight: lighter;
     font-size: small;
+    text-align: center;
 }
 
 .footericons{
@@ -65,6 +68,7 @@
     padding-top: 0vh;
     padding-bottom: 1vh;
     flex-direction: row;
+    text-align: center;
 }
 
 
@@ -79,8 +83,27 @@
     color: rgb(20, 20, 20); /* Change the text colour to background colour */
 }
 
-@media screen and (min-width: 10){
+
+/* Design for Mobile first */
+/* Design For Desktop Below */
+@media screen and (min-width: 500px){
     
+.mainsection{
+    /* text-align: left; */
+}
+
+.para{
+    text-align: left;
+}
+
+.footericons{
+    text-align: left;
+}
+
+.footer{
+    text-align: left;
+}
+
 }
 
 
