@@ -79,6 +79,12 @@
     color: rgb(20, 20, 20); /* Change the text colour to background colour */
 }
 
+@media screen and (min-width: 10){
+    
+}
+
+
+
 /*  */
 
 
