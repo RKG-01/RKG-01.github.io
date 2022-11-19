@@ -34,6 +34,9 @@
     font-size: xx-large;/*Font Sizee*/
     font-family: 'Major Mono Display', monospace;/*Font Style*/
     color: white;/*Font Colour*/
+    animation-name: maintext;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
     }
 
 .body{
@@ -43,6 +46,7 @@
     background-color:rgb(20, 20, 20);
     overflow-x: hidden;
 }
+
 
 .transition{
     background-image: url("/svg/wave-haikei-transition.svg");
@@ -119,8 +123,22 @@
 
 
 
-/*  */
+/* CSS Animating */
 
+@keyframes maintext{
+    0% {
+        color: rgb(20, 20, 20);
+        padding-left: 10%;
+    }
+
+    90% {
+        color: rgb(255, 255, 255);
+    }
+
+    100%{
+        padding-right: 0%;
+    }
+}
 
 
 
