@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 /* Major Mono Display */
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+/* Bungee Shaded */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+/* Bungee Inline */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+
 
 .para{
     /* To apply font. */
@@ -69,6 +75,11 @@
     padding-bottom: 1vh;
     flex-direction: row;
     text-align: center;
+}
+
+.Heading1{
+    font-family: 'Bungee Inline', cursive;
+    font-weight: lighter;
 }
 
 
