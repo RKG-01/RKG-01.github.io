@@ -112,12 +112,20 @@
 
 @keyframes intro {
     0%{
-        background-size: 200vh;
+        -ms-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
         color: rgb(184, 255, 255);
     }
 
     100%{
-        background-size: 178vh;
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
         color: rgb(255, 255, 255);
     }
 }

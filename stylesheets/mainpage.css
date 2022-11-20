@@ -186,6 +186,7 @@
     text-decoration: underline;
     height: 202px;
     width:  152px;
+    /* Should probably replace with transform:scale() */
 }
 
 
