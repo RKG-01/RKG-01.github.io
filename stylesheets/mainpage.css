@@ -75,9 +75,11 @@
     background-repeat: no-repeat;
     border-radius: 10px; /* Curved Edges */
     color: rgb(120, 120, 120);
-    text-decoration: none;
     background-position: center;
 }
+
+
+
 
 .projects{
     display: flex;
@@ -179,7 +181,7 @@
 
 /* On Hover Anim */
 .mainsection:hover{
-    background-position: 10px, 10px;
+    transform: scale(1.01);
     }
 
 .projectTilesDiv:hover{ /* The Project Tile Image Animations */
