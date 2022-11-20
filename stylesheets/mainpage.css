@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 
 
-
+/* Design for Mobile First */
 .para{
     /* To apply font. */
     font-family: 'JetBrains Mono', monospace; 
@@ -37,6 +37,7 @@
     animation-name: mainsec;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
+    overflow-x: hidden;
     }
 
 .body{
@@ -44,13 +45,43 @@
     font-family: 'JetBrains Mono', monospace;
     color: rgb(120, 120, 120);
     background-color:rgb(20, 20, 20);
-    overflow-x: 
-    hidden;
+    overflow-x: hidden;
 }
-.Heading1{
+.heading1{
     font-family: 'Bungee Inline', cursive;
     font-weight: lighter;
     padding-left: 2vw;
+}
+
+.projectTiles{ /* The Black Background and Text which the DIV compliments (The Image) Seperate Div so Border and link work. */
+    height:200px;
+    width: 150px;
+    background-color: rgb(15, 15, 15);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;/* Curved Edges */
+    text-align: center;
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+    padding: 4px; /* The Border size. */
+    margin-left: 5px; /* Spacing Between Tiles */
+    
+    
+}
+.projectTilesDiv{ /* The Div insive the Project Tiles (The Black Background). Seperate Div so Border and link work. */
+    height:200px;
+    width: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; /* Curved Edges */
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    padding-left: 4vw;
 }
 
 .footer{
@@ -92,10 +123,12 @@
     color: rgb(20, 20, 20); /* Change the text colour to background colour */
 }
 
-::-moz-selection{ /* When selected */
+::-moz-selection{ /* When selected but for Firefox*/
     background-color: rgb(33, 56, 156); /* Change Highlight colour for Gecko engine Browers. (Firefox) */
     color: rgb(20, 20, 20); /* Change the text colour to background colour */
 }
+
+
 
 
 /* Design for Mobile first */
@@ -106,8 +139,17 @@
     /* text-align: left; */
 }
 
+
 .para{
     text-align: left;
+}
+
+.projects{
+    background-color: rgb(20, 20, 20);
+}
+
+.sfm{
+    background-color: black;
 }
 
 .footericons{
@@ -118,11 +160,35 @@
     text-align: left;
 }
 
-.rhysreeyt{
-    text-align: left;
 }
 
+/* Link Colours */
+.projectTiles:link{ /* Unvisited Link */
+    color: rgb(120, 120, 120);
+    text-decoration: none;
 }
+.projectTiles:visited{ /* Visited Link */
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+}
+.projectTiles:active{ /* When Link is Activated */
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+}
+
+
+/* On Hover Anim */
+.mainsection:hover{
+    background-position: 10px, 10px;
+    }
+
+.projectTilesDiv:hover{ /* The Project Tile Image Animations */
+    background-size: 300%;
+    text-decoration: underline;
+    height: 202px;
+    width:  152px;
+}
+
 
 
 

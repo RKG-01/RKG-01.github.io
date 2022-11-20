@@ -1,0 +1,67 @@
+/* Righteous  */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* JetBrains Font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+/* Bungee Shaded */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+/* Bungee Inline */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
+
+.body{
+    background-color: rgb(20, 20, 20);
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align Horizontally */
+    align-content: center; /* Align Horizontally */
+    text-align: center; /* Align Horizontally */
+    justify-content: center; /* Align Vertically. */
+    background-image: url('/images/SFM/RussellsLabTest.PNG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 19, 9;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: x-large;
+    
+}
+
+.heading1{
+    font-family: 'Bungee Inline', cursive;
+    font-weight: lighter;
+    padding-left: 2vw;
+
+}
+
+.para{
+    font-family: 'JetBrains Mono', monospace;
+    color: rgb(120, 120, 120);
+    padding-left: 2vw;
+}
+
+.topBar{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    width: 100vw;
+    /* background-color: black; */ /*For Debug*/ 
+    position:absolute;
+    top: 0px;
+    
+}
+
+.backButton{
+    padding-left: 1vw;
+    padding-top: 1vh;
+    filter: invert(100%);
+    color: black;
+}
