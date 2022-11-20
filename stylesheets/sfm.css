@@ -12,6 +12,7 @@
     background-color: rgb(20, 20, 20);
     overflow-x: hidden;
     margin: 0;
+    color: white;
 }
 
 .intro{
@@ -31,14 +32,34 @@
     position: relative;
     color: white;
     font-family: 'Righteous', cursive;
-    font-size: x-large;
-    
+    font-size: x-large;    
+    animation-name: intro;
+    animation-duration: 2s;
+}
+
+.sec2{
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* align-content: left; */
+    justify-content: center;
+    aspect-ratio: 19, 9;
+    background-image: url('/images/SFM/session.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation-name: sec2;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
 }
 
 .heading1{
     font-family: 'Bungee Inline', cursive;
     font-weight: lighter;
     padding-left: 2vw;
+    text-align: center;
 
 }
 
@@ -65,3 +86,48 @@
     filter: invert(100%);
     color: black;
 }
+
+/* Design for Mobile first */
+/* Design For Desktop Below */
+@media screen and (min-width: 600px){
+
+    .sec2{
+        text-align: left;
+    }
+
+    .para{
+        text-align: left;
+    }
+    .heading1{
+        text-align: left;
+    }
+
+    .intro{
+        font-size: xx-large;
+    }
+
+    }
+
+/* CSS Animations */
+
+@keyframes intro {
+    0%{
+        background-size: 200vh;
+        color: rgb(184, 255, 255);
+    }
+
+    100%{
+        background-size: 178vh;
+        color: rgb(255, 255, 255);
+    }
+}
+
+@keyframes sec2 {
+    0%{
+        color: rgb(36, 53, 85);
+    }
+    100%{
+        color: rgb(255, 255, 255);
+    }
+}
+
