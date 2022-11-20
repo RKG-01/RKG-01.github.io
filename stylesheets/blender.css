@@ -46,7 +46,7 @@
     /* align-content: left; */
     justify-content: top;
     aspect-ratio: 19, 9;
-    background-image: url('/images/Blender/TestRender.gif');
+    background-image: url('/images/Blender/PorterTestRender.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -96,12 +96,12 @@
 /* When highlighted */
 ::selection{ /* When selected */
     background-color: rgb(25, 25, 25); /* Change Highlight colour for Webkit/Blink browsers (Chrome n stuff) */
-    color: rgb(20, 20, 20); /* Change the text colour to background colour */
+    color: rgb(94, 94, 94); /* Change the text colour to background colour */
 }
 
 ::-moz-selection{ /* When selected but for Firefox*/
     background-color: rgb(25, 25, 25); /* Change Highlight colour for Gecko engine Browers. (Firefox) */
-    color: rgb(20, 20, 20); /* Change the text colour to background colour */
+    color: rgb(94, 94, 94); /* Change the text colour to background colour */
 }
 
 /* Design for Mobile first */
