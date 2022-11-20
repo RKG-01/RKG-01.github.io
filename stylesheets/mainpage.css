@@ -34,7 +34,7 @@
     font-size: xx-large;/*Font Sizee*/
     font-family: 'Major Mono Display', monospace;/*Font Style*/
     color: white;/*Font Colour*/
-    animation-name: maintext;
+    animation-name: mainsec;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
     }
@@ -44,17 +44,14 @@
     font-family: 'JetBrains Mono', monospace;
     color: rgb(120, 120, 120);
     background-color:rgb(20, 20, 20);
-    overflow-x: hidden;
+    overflow-x: 
+    hidden;
 }
-
-
-.transition{
-    background-image: url("/svg/wave-haikei-transition.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.Heading1{
+    font-family: 'Bungee Inline', cursive;
+    font-weight: lighter;
+    padding-left: 2vw;
 }
-
 
 .footer{
     position: relative;
@@ -78,12 +75,14 @@
     padding-top: 0vh;
     padding-bottom: 1vh;
     flex-direction: row;
-    text-align: center;
+    
 }
 
-.Heading1{
-    font-family: 'Bungee Inline', cursive;
-    font-weight: lighter;
+.transition{
+    background-image: url("/svg/wave-haikei-transition.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -119,13 +118,17 @@
     text-align: left;
 }
 
+.rhysreeyt{
+    text-align: left;
+}
+
 }
 
 
 
 /* CSS Animating */
 
-@keyframes maintext{
+@keyframes mainsec{
     0% {
         color: rgb(20, 20, 20);
         padding-left: 10%;
@@ -139,7 +142,5 @@
         padding-right: 0%;
     }
 }
-
-
 
 
