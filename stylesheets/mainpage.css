@@ -76,6 +76,7 @@
     border-radius: 10px; /* Curved Edges */
     color: rgb(120, 120, 120);
     text-decoration: none;
+    background-position: center;
 }
 
 .projects{
