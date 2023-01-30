@@ -7,7 +7,7 @@
 
 $(function(){ //when the page loads.
 
-
+  
 
 
 function intro() {
@@ -55,19 +55,8 @@ document.getElementById("welcomeMessage").innerHTML = "Welcome, " + navigator.us
 
 
 window.onscroll = function() {
-  var docheight = $(document).height()
-  // console.log(scrollTop)
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { //When at the bottom of the page.
 
-  let currentScroll = window.scrollY + window.innerHeight;
-        // Modifier - Distance between bottom and activate area. (https://fjolt.com/article/javascript-check-if-user-scrolled-to-bottom)
-  let modifier = 5; 
-  if(currentScroll + modifier > docheight) {
-    console.log('bottom.')
-
-
-
-  
-  //if (scrollTop > 80){
     anime({
       targets: ".body",
       duration: 2000,
@@ -153,12 +142,7 @@ window.onscroll = function() {
           document.getElementById("scrollDown").innerHTML = "Scroll Down."
         }
       });
-  };
-
-}}
-);
-
-
-
-
-// });
+    };
+  }
+}
+)
