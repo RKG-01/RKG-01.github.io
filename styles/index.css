@@ -1,0 +1,96 @@
+/* Index.html Style */
+/* Remember Build for Mobile First. */
+
+/*Import.*/
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+/* font-family: 'JetBrains Mono', monospace; */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+/* font-family: 'IBM Plex Mono', monospace; */
+
+.body{  /*Index Background*/
+display: flex;
+flex-direction: column;
+background-color: #000000;
+overflow-x: hidden;
+overflow-y: hidden; /*For Anime.js to change.*/
+}
+
+.introductionSection{
+    display: flex;
+    flex-direction: row;
+    height: 90vh; 
+    overflow-x: hidden;
+    width: 100vw;
+    justify-content: center; /*Horizontal(Direction of flex)*/
+    align-items: center; /*Vertical*/
+}
+
+.introductionDiv{
+/* width: 100vw; */
+/* padding-left: 10px; */
+}
+
+.headingOne{
+color: white;
+font-family: 'IBM Plex Mono', monospace;
+font-size: 70px;
+margin: 0px;
+text-align: center;
+letter-spacing: 50px; /*Anime.js should change to 30?*/
+}
+
+.headingTwo{
+color: rgb(145, 142, 222);
+font-family: 'JetBrains Mono', monospace;
+font-weight: lighter;
+font-size: 45px;
+margin-top: 10px;
+text-align: center;
+}
+
+.secondSection{
+overflow-x: hidden;
+height: 10vh;
+}
+
+.scrollDown{
+color: white;
+font-family: 'JetBrains Mono', monospace;
+opacity: 0; /*For Anime.js to fade it.*/
+}
+
+
+.secondDiv{
+    text-align: center;
+    width: 100vw;
+}
+
+.thirdSection{
+    overflow-y: hidden;
+    width: 100vw;
+    height: 10vh;
+    background-color: 000000;
+    text-align: center;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+}
+
+.welcomeMessage{
+    font-size: 12px;
+}
+
+
+/* Design for Mobile first */
+/* Design For Desktop Below */
+@media screen and (min-width: 600px){
+    .headingOne{
+        text-align: left; /*Anchor to the left for cool effect*/
+    }
+
+    .headingTwo{
+        text-align: left;
+    }
+}

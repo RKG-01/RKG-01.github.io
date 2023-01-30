@@ -1,75 +1,52 @@
-
+<!-- Main Page -->
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <a href="/"></a>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhys_Ree</title>
-    <link rel = 'icon' type="image/x-icon" href="/icons/Rhys_Ree_Logo.png">
+    <title>REE.</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/index.css">
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> <!--Jquery.js-->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script> <!--Anime.js-->
+    <script src="/js/index.js"></script>
+
 </head>
 <body class="body">
-
-    <!-- Linking the Stylesheet to HTML document. -->
-    <link rel="stylesheet" href="stylesheets\mainpage.css">
-    <link rel="script" href="/javascript/random.js"
-
-
-<!-- Introduction -->
-    <section class="mainsection">
-        <h1>Hello there, i'm RHys!</h1>
-        <p>And this is my work in progress PORTFOLIO WEBSITE.</p>
-        
-    </section>
+    <section style="overflow-x: hidden;">  <!-- For some reason, Mobile ignores Overflow when applied to <body>. I made a seperate section to hide the overflow-X as a workaround. -->
 
 
 
-<!-- Second Section -->
-    <section class="para">
-        <h1 class="heading1">Who am I?</h1>
-        <p>Hi! I'm Rhys, a 15-year-old student who spends way too much time behind his Computer. Passionate about photography, videography, editing, programming, game development, animation, modelling and doing other random things which intrigue me during my free time. All this while trying to survive the torturous school life.</p>
-    </section>
 
-<!-- Projects -->
-    <section>
-        <h1 class="heading1">Projects/Stuff I'm doing:</h1>
-            <section class="projects"> 
-                <!-- Use for Development: <a href="Projects/SFM.html" class="projectTiles"> It's like this so the Page Link doesn't have a .html tag  -->
-                <a href="https://www.rhys-ree.ga/Projects/SFM" class="projectTiles">   
-                     <div id="SFM" class="projectTilesDiv" style="background-image: url('/images/SFM/RussellsLabTest.PNG');"> Source Filmmaker </div>
-                </a> <!-- To Make the Div Hyperlinked, placed into <a> -->
+        <section id="introductionSection" class="introductionSection">
+    <div id="introductionDiv" class="introductionDiv">
+        <h1 id="HeadingOne" class="headingOne">Hello There.</h1>
+        <h2 id="HeadingTwo" class="headingTwo">I'm Rhys.</h2>
+    </div>
+</section>
 
-                <!-- <a href="/Projects/Blender.html" class="projectTiles"> -->
-                <a href="https://www.rhys-ree.ga/Projects/Blender" class="projectTiles">
-                     <div id="Blender" class="projectTilesDiv" style="background-image: url('/images/Blender/BlenderBlock.png');" > Blender </div>
-                 </a>
-             </section>
-           
-        
-    </section>
+<section id="secondSection" class="secondSection">
+    <div id="secondDiv" class="secondDiv">
+        <p id="scrollDown" class="scrollDown">Scroll Down.</p>
+    </div>
+
+</section>
 
 
-    <!-- Footer -->
-<footer class = "footer">
-    <!-- Paragraphed Stuff -->
-<section>Made with ♥ from Trinidad & Tobago and the United Kingdom.</section>
-<section>Please, for my sanity use a modern browser.</section>
+<section id="thirdSection" class="thirdSection">
+    <p id="welcomeMessage" class="welcomeMessage">Welcome, User.</p>
+</section>
 
-<!-- Socials -->
-    <section> <!-- Sectioned so I can separate the Flex Direction. -->
-        <h2>Socials:</h2> <!-- Title -->
-    </section>
-    <section class="footericons">
-        <a href="https://youtube.com/@rhys_ree" target="_blank"> <img src="icons/brand-full-color-icon/youtube_full_color_icon/social/64px/red/youtube_social_icon_red.png"></a><!-- Youtube Link -->
-        <a href="https://github.com/RKG-01" target="_blank"> <img src="icons/GitHub-Mark/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png"></a><!-- Github Link -->
-        <a href="https://twitter.com/REEE_RKG" target="_blank"> <img src="icons/twitter-logo-01282021/Twitter logo/PNG/2021 Twitter logo - blue 64pixels.png"></a><!-- Github Link -->
 
-    </section>
-</footer>
+
+
+</section>
+
 
 </body>
-
 </html>
