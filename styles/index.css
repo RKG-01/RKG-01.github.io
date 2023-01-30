@@ -92,4 +92,8 @@ opacity: 0; /*For Anime.js to fade it.*/
     .headingTwo{
         text-align: left;
     }
+
+    .introductionSection{
+        height: 90vh;
+    }
 }
