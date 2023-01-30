@@ -55,11 +55,19 @@ document.getElementById("welcomeMessage").innerHTML = "Welcome, " + navigator.us
 
 
 window.onscroll = function() {
-  var scrollTop = $(window).scrollTop()
   var docheight = $(document).height()
-  console.log(scrollTop)
+  // console.log(scrollTop)
 
-  if (scrollTop > 100){
+  let currentScroll = window.scrollY + window.innerHeight;
+        // Modifier - Distance between bottom and activate area. (https://fjolt.com/article/javascript-check-if-user-scrolled-to-bottom)
+  let modifier = 5; 
+  if(currentScroll + modifier > docheight) {
+    console.log('bottom.')
+
+
+
+  
+  //if (scrollTop > 80){
     anime({
       targets: ".body",
       duration: 2000,
@@ -90,7 +98,7 @@ window.onscroll = function() {
           color: 'rgb(0,0,0)',
           easing: 'easeInOutQuart',
           begin: function(anim){
-            document.getElementById("HeadingTwo").innerHTML = "Welcome to my website. There's nothing here right now, still developing the website!"
+            document.getElementById("HeadingTwo").innerHTML = "There's nothing here right now, still developing the website!"
           }
         });
         anime({
@@ -147,12 +155,10 @@ window.onscroll = function() {
       });
   };
 
+}}
+);
 
 
 
 
-
-}
-
-
-});
+// });
