@@ -1,148 +1,100 @@
-// Index.html Javascript
+console.log("@Rhys_Ree on Youtube :)");
 
-//$ is Jquery
-//anime is Anime.js
-
+$(document).ready(function(){ //When the document has fully loaded.
 
 
-$(function(){ //when the page loads.
+const lenis = new Lenis({ //Lenis smooth scrolling
+scrollWheel: true, //enable smooth
+Lerp: 0.7, //smooth intensity
+wheelMultiplier: 0.5 //scroll amount
+});
 
-  
+lenis.on('scroll', (e) => {
+  lenis.on('scroll', ScrollTrigger.update)
+  //console.log(e)
+});
 
-
-function intro() {
-document.getElementsByClassName(".body").scroll = 0
-
-    anime({
-    targets: ".headingOne",
-    duration: 2000,
-    letterSpacing: 10,
-    easing: 'easeInOutQuart',
-    })
-
-    anime({
-      targets: ".headingTwo",
-      duration: 2000,
-      color: 'rgb(255, 255, 255)',
-      easing: 'easeInOutQuart',
-      })
-
-};
-
-function secondSection() {
-  anime({
-    targets: ".scrollDown",
-    delay: 1000,
-    duration: 2000,
-    opacity: 1,
-    easing: 'easeInOutQuart',
-    begin: function(anim){ //When the animation is begind.
-      $("body").css("overflow-y", "scroll"); //Enable scrolling. (Using Jquery.)
-    }
-    })
-
-    
-};
-
-intro();
-secondSection();
-
-
-//Welcome Message.
-document.getElementById("welcomeMessage").innerHTML = "Welcome, " + navigator.userAgent + "."
-
-	
-
-
-window.onscroll = function() {
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { //When at the bottom of the page.
-
-    anime({
-      targets: ".body",
-      duration: 2000,
-      backgroundColor: 'rgb(255, 255, 255)',
-      easing: 'easeInOutQuart',
-      });
-      anime({
-        targets: '.thirdSection',
-        duration: 2000,
-        color: 'rgb(0,0,0)',
-        easing: 'easeInOutQuart',
-        });
-      anime({
-          targets: '.headingOne',
-          duration: 2000,
-          color: 'rgb(0,0,0)',
-          fontSize: 30,
-          easing: 'easeInOutQuart',
-          begin: function(anim){
-            document.getElementById("HeadingOne").innerHTML = "Welcome to Rhys_Ree."
-          }
-        });
-      anime({
-          targets: '.headingTwo',
-          delay: 1000,
-          duration: 2000,
-          fontSize: 25,
-          color: 'rgb(0,0,0)',
-          easing: 'easeInOutQuart',
-          begin: function(anim){
-            document.getElementById("HeadingTwo").innerHTML = "There's nothing here right now, still developing the website!"
-          }
-        });
-        anime({
-          targets: '.scrollDown',
-          duration: 2000,
-          color: 'rgb(222, 129, 129)',
-          easing: 'easeInOutQuart',
-          begin: function(anim){
-            document.getElementById("scrollDown").innerHTML = "(THIS SITE IS IN ACTIVE DEVELOPMENT.) You may scroll back up and awe."
-          }
-        });
-  } else {
-    anime({
-      targets: ".body",
-      duration: 2000,
-      backgroundColor: 'rgb(0,0,0)',
-      easing: 'easeInOutQuart',
-      });
-    anime({
-        targets: '.thirdSection',
-        duration: 2000,
-        color: 'rgb(255,255,255)',
-        easing: 'easeInOutQuart',
-      });
-    anime({
-          targets: '.headingOne',
-          duration: 2000,
-          color: 'rgb(255,255,255)',
-          fontSize: 70,
-          easing: 'easeInOutQuart',
-          begin: function(anim){
-          document.getElementById("HeadingOne").innerHTML = "Hello There."
-          }
-      });
-    anime({
-        targets: '.headingTwo',
-        duration: 2000,
-        delay: 1000,
-        fontSize: 45,
-        color: 'rgb(255,255,255)',
-        easing: 'easeInOutQuart',
-        begin: function(anim){
-          document.getElementById("HeadingTwo").innerHTML = "I'm Rhys."
-        }
-      });
-      anime({
-        targets: '.scrollDown',
-        duration: 2000,
-        color: 'rgb(255,255,255)',
-        easing: 'easeInOutQuart',
-        begin: function(anim){
-          document.getElementById("scrollDown").innerHTML = "Scroll Down."
-        }
-      });
-    };
-  }
+//for lenis internal operations
+function raf(time) { 
+  lenis.raf(time)
+  requestAnimationFrame(raf)
 }
-)
+requestAnimationFrame(raf);
+
+lenis.stop()
+
+//Functions
+
+function afterIntroAnim(){
+  lenis.start();
+ $("body").css("overflow-y", "scroll"); //To enable scrolling
+}
+
+function bgAnim(){
+  gsap.timeline()
+    .to(".bgImg", {opacity: 0.7, duration: 1, ease: 'Power1.easeInOut'});
+}
+
+//Triggered Animations
+
+//Sequence of anims on the first section.
+// https://greensock.com/docs/v3/Plugins/ScrollTrigger
+gsap.timeline({}) // To create the timeline.
+.from("#hello_there, #rhys", {letterSpacing:'50px', opacity:0, duration: 2, ease: 'Power4.easeInOut'})
+.from("#scroll_down", {opacity:0, delay: 0, duration: 0.8, ease: 'Power1.easeInOut', onComplete: afterIntroAnim})
+
+
+
+//thirdSection
+gsap.timeline({ //Create a timeline.
+   //Timeline properties
+   scrollTrigger: ".thirdSection", //To trigger the timeline animation when class in view.
+}) 
+.from(".thirdSection", {opacity:0, delay: 0.5, duration: 0.8, ease: 'Power1.easeInOut', onComplete: bgAnim}) //Anime from properties. https://greensock.com/docs/v2/Easing
+  
+//fourthSection
+gsap.timeline({
+  scrollTrigger: ".fourthSection",
+})
+.from("#fourthSectionH", {paddingLeft:100, duration:0.8, delay: 0.1, ease: 'Power1.easeInOut'})
+
+//Images (Photography Section)
+gsap.timeline({
+  scrollTrigger: "#p1_p_img"
+})
+.to("#p1_p_h4", {letterSpacing:'4px', duration: 0.8, ease: 'Power1.easeInOut'})
+.from("#p1_p_img", {filter: 'blur(64px)', scale: 1, duration: 0.8, ease: 'Power1.easeInOut'})
+
+gsap.timeline({
+  scrollTrigger: "#gtr_p_img"
+})
+.to("#gtr_p_h4", {letterSpacing:'4px', duration: 0.8, ease: 'Power1.easeInOut'})
+.from("#gtr_p_img", {filter: 'blur(64px)', scale: 1, duration: 0.8, ease: 'Power1.easeInOut'})
+
+gsap.timeline({
+ scrollTrigger: "#irl_p_img"
+ })
+.to("#irl_p_h4", {letterSpacing:'4px', duration: 0.8, ease: 'Power1.easeInOut'})
+.from("#irl_p_img", {filter: 'blur(64px)', scale: 1, duration: 0.8, ease: 'Power1.easeInOut'})
+
+
+//Fifth Section
+gsap.timeline({
+  scrollTrigger: ".fifthSection"
+})
+.to(".fifthSection", {backgroundColor: "#080808", duration: 0.8, ease: 'Power1.easeInOut'})
+.from("#fifthSectionH", {paddingLeft:100, duration:0.8, delay: 0.1, ease: 'Power1.easeInOut'})
+
+
+
+}) ;
+
+
+
+
+//If placed on seperate lines, will play animations chronologically.
+//introAnim.from("#rhys", {opacity:0, duration: 2 , ease: 'Power1.easeInOut'})
+
+//Welcome Message. TEST
+//document.getElementById("welcomeMessage").innerHTML = "Welcome, " + navigator.userAgent + "."
+//.play() //Play the animation manually.

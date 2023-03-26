@@ -1,52 +1,96 @@
-<!-- Main Page -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REE.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Rhys</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/styles/index.css">
+<!-- https://github.com/studio-freight/lenis LENIS -->
+<!-- https://greensock.com/docs/v3/GSAP/Timeline/ -->
+<!-- https://greensock.com/docs/v3/Plugins/ScrollTrigger/static.positionInViewport() -->
 
-    <!-- js -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> <!--Jquery.js-->
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script> <!--Anime.js-->
-    <script src="/js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>  <!-- Lennis.js -->
+    <script src="js/index.js"></script>
+    
+   
 
 </head>
-<body class="body">
-    <section style="overflow-x: hidden;">  <!-- For some reason, Mobile ignores Overflow when applied to <body>. I made a seperate section to hide the overflow-X as a workaround. -->
+<body>
+    <!-- Img to replace "background-image" property to allow fading effect. -->
+<img class ="bgImg" src="/assets/RhysGaffar-01.JPG"/>
+    <section class="firstSection">
+        <div>
+            <div>
+                <h1 class= "text-xl" id="hello_there">Hello there,</h1>
+            </div>
+            <div>
+                <h1 class="rhys transition ease-in-out duration-3000 hover:scale-105 hover:uppercase hover:tracking-widest" id="rhys">I'm Rhys.</h1>
+            </div>
+        
+        </div>
+    </section>
+
+    <section class="secondSection">
+        <p id="scroll_down">Scroll Down.</p>
+    </section>
+
+    <section class="thirdSection" id="dd">
+        <p>Hi! I'm Rhys, a 15-year-old whom spends too much time alone. <br> This website is constantly being updated.</p>
+    </section>
+
+    <div id="3-4-Diviver" style="padding-bottom: 5vh;"></div>
+
+    <section class="fourthSection">
+        <h1 class="underline decoration-dashed text-3xl flex justify-start pl-3" id="fourthSectionH">Photography.</h1> <!--https://tailwindcss.com/docs/justify-content-->
+        <div style="padding-top: 1vh;">
+            <p style="padding-bottom: 5vh; font-size: 16px;">I like photography.(And Videos)</p>
+        </div>
+            <div id="photgraphyImgP1">
+                <h4 id="p1_p_h4"class="photographyImgHeading text-white">I usually take photos <em style="color:dodgerblue;">in games</em>. Especially <em style="color: darkred;">Assetto Corsa</em></h4>
+                <img id="p1_p_img"style="scale: 0.9;" src="/assets/nurburgring-p1.png" alt="Photo"> 
+            </div>
+            <div id="photgraphyImgGTR">
+                <h4 id="gtr_p_h4"class="photographyImgHeading text-white">I <em style="color: crimson; font-style: italic;">love</em> experimenting. With anything.</h4>
+                <img id="gtr_p_img"style="scale: 0.9;" src="/assets/GTR-Skyline.png" alt="Photo"> 
+            </div>
+            <div id="photgraphyImgRL">
+                <h4 id="irl_p_h4"class="photographyImgHeading text-white">Sometimes, I visit the <em style="color: aquamarine;">Outside World</em>. (Whoah)</h4>
+                <img id="irl_p_img"style="scale: 0.9; height: auto; width: 100vw; object-fit: cover; object-position: 10% 90%;" src="/assets/DSC_7820-wm1080.png" alt="Photo"> 
+            </div>
+    </section>
+
+    <section class="fifthSection">
+        
+    </section>
 
 
 
-
-        <section id="introductionSection" class="introductionSection">
-    <div id="introductionDiv" class="introductionDiv">
-        <h1 id="HeadingOne" class="headingOne">Hello There.</h1>
-        <h2 id="HeadingTwo" class="headingTwo">I'm Rhys.</h2>
-    </div>
-</section>
-
-<section id="secondSection" class="secondSection">
-    <div id="secondDiv" class="secondDiv">
-        <p id="scrollDown" class="scrollDown">Scroll Down.</p>
-    </div>
-
-</section>
-
-
-<section id="thirdSection" class="thirdSection">
-    <p id="welcomeMessage" class="welcomeMessage">Welcome, User.</p>
-</section>
-
-
-
-
-</section>
-
-
+<!-- Remember, Column is inverted. -->
+    <footer class="foot">
+        <div style="width: 100vw;">
+            <p>Thank you for visiting my W.I.P website. <br> Made with ♥ from Trinidad & Tobago and the United Kingdom.</p> 
+        </div>
+        <div>
+            <p>Here are my socials: </p>
+                <div id="socialIcons" style="display: flex; flex-direction: row-reverse; width: 90vw;">
+                    <a style="display: inline-block; height: 75px; width: 75px; padding-left: 10px;" href="https://twitter.com/REEE_Rhys"><img src="/assets/2021 Twitter logo - blue.png" alt="Twitter"></a>
+                    <a style="display: inline-block; height: 75px; width: 75px; padding-left: 10px;" href="https://www.youtube.com/@rhys_ree"><img src="/assets/yt_icon_rgb.png" alt="Youtube"></a>
+                </div>
+             
+                
+        </div>
+        
+        
+        
+        
+    </footer>
 </body>
 </html>
