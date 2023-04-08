@@ -41,6 +41,8 @@ function bgAnim(){
 // https://greensock.com/docs/v3/Plugins/ScrollTrigger
 gsap.timeline({}) // To create the timeline.
 .from("#hello_there, #rhys", {letterSpacing:'50px', opacity:0, duration: 2, ease: 'Power4.easeInOut'})
+
+gsap.timeline({})
 .from("#scroll_down", {opacity:0, delay: 0, duration: 0.8, ease: 'Power1.easeInOut', onComplete: afterIntroAnim})
 
 
