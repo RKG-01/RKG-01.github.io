@@ -114,6 +114,10 @@ p{
     background-color: #030409;
 }
 
+.smlink{
+    padding-right: 10px; height: 9vh; width: 9vh; padding-left: 0px; margin-right: 20px;
+}
+
 
 /* Design for desktop */
 @media screen and (min-width: 600px){
@@ -132,6 +136,10 @@ h1{
     padding-left: 1.65vw;
     width: auto;
     padding-bottom: 2vh;
+}
+
+.smlink{
+    padding-right: 10px; height: 12vh; width: 12vh; padding-left: 0px; margin-right: 20px;
 }
 
 }
