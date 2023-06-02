@@ -98,6 +98,8 @@ p{
     display: flex; 
     flex-direction: column; 
     align-self: center;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
 }
 
 
