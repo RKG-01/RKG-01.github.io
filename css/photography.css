@@ -1,0 +1,184 @@
+/* CSS for Index.html */
+/* Remember: Design for mobile first. */
+
+
+/* Fonts */
+/* font-family: 'Major Mono Display', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+/* font-family: 'JetBrains Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+
+html{
+    /*scroll-behavior: smooth; /*For anchor links to move around the page smoothly. Not affiliated with lenis smooth scroll.*/
+}
+
+body{
+    background-color: #030409;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden; /*For index.js to change after animations.*/
+    overflow-anchor: none; /*For default scroll override.*/
+    align-items: center;
+    
+}
+h1{
+    font-family:'Major Mono Display', monospace;
+    color: white;
+    font-size: 30px;
+
+    
+}
+
+p{
+    font-family: 'JetBrains Mono', monospace;
+    color: white;
+    font-size: 14px; 
+}
+
+.bgImg{
+    /* https://www.w3schools.com/css/css3_images.asp */
+    position: fixed; /*So background doesn't move with scroll.*/
+    object-fit: cover; /*To fix sizing*/
+    z-index: -1; /*Send to backgound*/
+    top: 0px; /*Space on top for some reason*/
+    opacity: 0; /*To animate from*/
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.scrollDown{
+    font-family: 'JetBrains Mono', monospace;
+    color: rgb(230, 230, 230);
+    font-size: 10px; 
+}
+
+.firstSection{
+   display: flex; /*For flexbox layout*/
+   flex-direction: column; /*For vertical layout*/
+   width: 100vw; /*Width of display*/
+   height: 90vh;
+   justify-content: center; /*Horizontal(Direction of flex)*/
+   align-items: center; /*Vertical*/
+   text-align: center;
+}
+
+.rhys{
+    font-size: 33px;
+}
+
+.secondSection{
+    width: 100vw; /*Width of display*/
+    height: 10vh;
+    text-align: center; /*To center the text.*/
+}
+
+.thirdSection{
+    display: flex;
+    text-align: center;
+    height: auto;
+    background-color: #030409; /*Text Highlight.*/
+    width: 95vw;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: auto;
+    background-color: #030409;
+    /* width: 50vw; */
+    max-width: 100%;
+    transform: scale(0.9);
+    filter: blur(0px);
+}
+
+.ytDiv{
+    display: flex; 
+    flex-direction: column; 
+    align-self: center;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+}
+
+
+
+.overviewSection{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    background-color: #030409; /*Text Highlight.*/
+    width: 100vw;
+}
+
+.fifthSection{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #030409;
+    background-color: #030409;
+    height: auto;
+    width: 100vw;
+    align-items: center;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100vw;
+    height: auto;
+    background-color: #030409;
+}
+
+.smlink{
+    padding-right: 10px; height: 9vh; width: 9vh; padding-left: 0px; margin-right: 20px;
+}
+
+.photographyImgHeading{
+    font-family: Jetbrains Mono;
+}
+
+::selection {
+    background: rgb(245 158 11); /* WebKit/Blink Browsers */
+  }
+::-moz-selection {
+    background: rgb(245 158 11); /* Gecko Browsers */
+  }
+
+
+
+
+/* Design for desktop */
+@media screen and (min-width: 640px){
+.thirdSection{
+    text-align: left;
+    justify-content: left;
+    width: auto;
+}
+
+h1{
+    font-size: 40px;
+    padding-left: 25px;
+}
+
+.foot{
+    padding-left: 1.65vw;
+    width: auto;
+    padding-bottom: 2vh;
+}
+
+.smlink{
+    padding-right: 10px; height: 12vh; width: 12vh; padding-left: 0px; margin-right: 20px;
+}
+
+.ytDiv{
+    display: flex; 
+    flex-direction: row; 
+    align-self: center;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+}
+
+}
