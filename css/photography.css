@@ -140,6 +140,17 @@ p{
     font-family: Jetbrains Mono;
 }
 
+.navigator{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-anchor:start;
+    color: white;
+    font-family: Jetbrains Mono;
+    padding-top: 1vh;
+    padding-left: 1vw;
+}
+
 ::selection {
     background: rgb(245 158 11); /* WebKit/Blink Browsers */
   }
