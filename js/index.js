@@ -1,4 +1,23 @@
+//Testing
 console.log("@Rhys_Ree on Youtube :)");
+let potato = "spud"
+const spud = "irish"
+
+console.log(potato);
+
+let potatoAbt = {
+  naem: potato,
+  age: 5
+};
+
+console.log(potatoAbt);
+console.log(potatoAbt.age);
+
+
+
+
+
+
 
 $(document).ready(function(){ //When the document has fully loaded.
 
