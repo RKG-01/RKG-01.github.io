@@ -72,7 +72,7 @@ let dMode = false //Debug Mode
       ease: "power1.out",
       backgroundColor: '#080808',
       scrollTrigger: {trigger: '.secondSection', start: height},
-      // onStart: () => lenis.stop()
+      onStart: () => lenis.stop()
     })
 
     var bangSeq = gsap.timeline({duration: 0.5, ease: 'linear', scrollTrigger: {trigger: '.secondSection', start: height}}, "<")
