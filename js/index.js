@@ -22,6 +22,11 @@ let dMode = false //Debug Mode
   lenis.scrollTo(document.getElementById("introSection"))
   if (dMode == false){ //If debug mode == on, then don't pause the scroll.
     lenis.stop()
+  } 
+
+  if (screen.width <= 640){
+    console.log("Small Screen")
+    lenis.start()
   }
   //End of Lenis stuff
 
