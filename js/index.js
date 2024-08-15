@@ -191,3 +191,5 @@ function toggle(element) { //Fired when the button(element) is clicked.
  if (dMode == true){
   debugMode()
  }
+
+ $(document).ready(function(){lenis.start();})
