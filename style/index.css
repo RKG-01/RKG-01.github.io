@@ -18,8 +18,9 @@
     
 }
 
-.bod{
+.bod{ /*Because the Built-In Body class did not do anything. :') */
     overflow-y: hidden;
+    background-color: #080808;
 }
 
 .homeSection{
@@ -191,5 +192,9 @@
 
     *{
         overflow-y: hidden;
+    }
+
+    .footerDiv{
+        margin-left: 5%;
     }
 }

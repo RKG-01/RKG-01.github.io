@@ -4,6 +4,12 @@
 
 /* https://www.learnui.design/blog/mobile-desktop-website-font-size-guidelines.html */
 
+*{
+    -webkit-overflow-scrolling: touch;
+    overflow-y: visible;
+}
+
+
 body{
     background-color: #080808;
     display: flex;
@@ -18,7 +24,7 @@ body{
     color: white;
     /* margin-left: 5%;
     margin-top: 5%; */
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 5%;
 }
 
