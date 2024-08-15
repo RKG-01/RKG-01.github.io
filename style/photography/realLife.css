@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); /*Archivo Black*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); /*IBM*/
+
+/* https://www.learnui.design/blog/mobile-desktop-website-font-size-guidelines.html */
+
+body{
+    background-color: #080808;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+.heading{
+    font-family: 'Archivo Black';
+    color: white;
+    /* margin-left: 5%;
+    margin-top: 5%; */
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.introSection{
+    font-family: 'IBM Plex Mono';
+    font-size: 20px;
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    margin: 5%;
+    position: relative;
+}
+
+.sticky{
+    background-color:#040404;
+    color: white;
+    text-decoration: dotted;
+    text-align: left;
+    font-size: 18px;
+    /* position: sticky; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min-content;
+    height: min-content;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-family: 'IBM Plex Mono';
+}
+
+.photoSection{
+    font-size: 16px;
+    height: min-content;
+    position: relative;
+}
+
+.photoDiv{
+    height: max-content;
+    margin-bottom: 5vh;
+}
+
+.photo{
+    width: 90vw;
+}
+
+.credit{
+    font-size: 14px;
+}
+
+a:visited{
+    color: white;
+}
+
+/* For PC */
+
+@media screen and (min-width: 640px){
+
+    .photoSection{
+        font-size: 20px;
+    }
+
+    .credit{
+        font-size: 18px;
+    }
+
+    .heading{
+        font-size: 60px;
+        margin-bottom: auto;
+    }
+
+    .sticky{
+        font-size: 20px;
+    }
+
+    .photo{
+        height: 80vh;
+        width: auto;
+    }
+
+}

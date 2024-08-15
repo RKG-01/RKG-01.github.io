@@ -1,104 +1,188 @@
-//Testing
-console.log("@Rhys_Ree on Youtube :)");
-let potato = "spud"
-const spud = "irish"
+//I tried learning Javascript on the fly making this... Please forgive the probably unoptimal and spaghetti code.
+// const { duration } = require("@mui/material");
+let dMode = false //Debug Mode
 
-console.log(potato);
+// Internal GSAP stuff
+ document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger,ScrollToPlugin,Draggable,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase)
 
-let potatoAbt = {
-  naem: potato,
-  age: 5
-};
+  //Lenis Stuff https://lenis.darkroom.engineering/ https://github.com/darkroomengineering/lenis
+  const lenis = new Lenis()
 
-console.log(potatoAbt);
-console.log(potatoAbt.age);
+  lenis.on('scroll', (e) => {
+    // console.log(e)
+  })
 
-
-
-
-
-
-
-$(document).ready(function(){ //When the document has fully loaded.
-
-
-const lenis = new Lenis({ //Lenis smooth scrolling
-scrollWheel: true, //enable smooth
-Lerp: 0.7, //smooth intensity
-wheelMultiplier: 0.5 //scroll amount
-});
-
-lenis.on('scroll', (e) => {
   lenis.on('scroll', ScrollTrigger.update)
-  //console.log(e)
-});
 
-//for lenis internal operations
-function raf(time) { 
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-requestAnimationFrame(raf);
+  gsap.ticker.add((time)=>{
+    lenis.raf(time * 1000) // "tick" time for lenis? (provided by GSAP)
+  })
+  gsap.ticker.lagSmoothing(0)
+  lenis.scrollTo(document.getElementById("introSection"))
+  if (dMode == false){ //If debug mode == on, then don't pause the scroll.
+    lenis.stop()
+  }
+  //End of Lenis stuff
 
-lenis.stop()
+  //Initial sequence of Animations.
+    let tl = gsap.timeline()
+    tl.to(".introText", {text: "Hello there, I'm Rhys.", duration: 3, delay: 1, ease: "power1.out"}, 1);
+    tl.to(".introPara", {text: "...and I do stuff.", duration: 3, ease: "power1.out", onComplete: () => kek()}, ">"); //https://gsap.com/resources/getting-started/timelines
+    
+    
+    function kek() { //https://gsap.com/resources/getting-started/control
+      lenis.start()
+      gsap.to(".sd", {opacity: 1, duration: 1, ease: "power1.out"})
+      // console.log("Vis");
+    };
+    var height = window.innerHeight //https://www.w3schools.com/howto/howto_js_get_current_window.asp
+    gsap.to(".sd", {
+      text: "Thanks.",
+      scrollTrigger: {trigger: '.secondSection', scrub: true, start: 100, end: height/3} //https://gsap.com/docs/v3/HelperFunctions/helpers/imageSequenceScrub?_highlight=scrub
+    })
 
-//Functions
+    gsap.to(".introDiv", {
+      yPercent: 200,
+      'webkitFilter': 'blur(20px)', //https://stackoverflow.com/questions/36875629/animate-blur-filter-with-gsap
+      scrollTrigger: {trigger: '.secondSection', scrub: true, start: 0}
+    })
 
-function afterIntroAnim(){
-  lenis.start();
- $("body").css("overflow-y", "scroll"); //To enable scrolling
-}
+    //When user clicks to skip animations.
+    const section1Element = document.getElementById("homeSection");
+      section1Element.addEventListener("click", () => {
+        tl.totalProgress(1);
+      });
 
-function bgAnim(){
-  gsap.timeline()
-    .to(".bgImg", {opacity: 0.7, duration: 1, ease: 'Power1.easeInOut'});
-}
+    //if user have visited the website within one hour.
+    // if ( firstImpression(0.04166666666666666666666666666667) ) { /*https://github.com/robflaherty/firstImpression.js*/
+    //   console.log('New user');
+    // }
 
-//Triggered Animations
+    // firstImpression(null)
 
-//Sequence of anims on the first section.
-// https://greensock.com/docs/v3/Plugins/ScrollTrigger
-gsap.timeline({}) // To create the timeline.
-.from("#hello_there, #rhys", {letterSpacing:'50px', opacity:0, duration: 2, ease: 'Power4.easeInOut'})
+    //Second Section
+    gsap.to(".secondSection", {
+      duration: 1.5,
+      ease: "power1.out",
+      backgroundColor: '#080808',
+      scrollTrigger: {trigger: '.secondSection', start: height},
+      onStart: () => lenis.stop()
+    })
 
-gsap.timeline({})
-.from("#scroll_down", {opacity:0, delay: 0, duration: 0.8, ease: 'Power1.easeInOut', onComplete: afterIntroAnim})
+    var bangSeq = gsap.timeline({duration: 0.5, ease: 'linear', scrollTrigger: {trigger: '.secondSection', start: height}}, "<")
+    bangSeq.to(".bang", {
+      text: "You're welcome."
+    })
+    bangSeq.to(".bang", {
+      opacity: 0,
+      onComplete: () => document.getElementById("bang").style.visibility = "hidden"
+    })
+    bangSeq.to(".secondSectionDiv", {
+      opacity: 1,
+      delay: 0.5,
+      stagger: 1,
+      onComplete: () => lenis.start()
+    })
+/////////////End of Initial Animations.
 
+//Buttons on home page.
 
-//thirdSection
-gsap.timeline({ //Create a timeline.
-   //Timeline properties
-   scrollTrigger: ".thirdSection", //To trigger the timeline animation when class in view.
-}) 
-.from(".thirdSection", {opacity:0, delay: 0.5, duration: 0.8, ease: 'Power1.easeInOut', onComplete: bgAnim}) //Anime from properties. https://greensock.com/docs/v2/Easing
-  
-//overviewSection
-gsap.timeline({
-  scrollTrigger: ".overviewSection",
-})
-.from("#overviewH", {paddingLeft:100, duration:0.8, delay: 0.1, ease: 'Power1.easeInOut'})
+  //Button Constants
+  const photographer = document.getElementById("photographer");
+  const contentCreator = document.getElementById("contentCreator");
+  const musician = document.getElementById("musician");
+  const gameDeveloper = document.getElementById("gameDeveloper");
+  const any = [photographer, contentCreator, musician, gameDeveloper];  //List all of the constants to be detected as one- for events.
+  let states = {"photographer": [false], //Dictionary to control button states.
+                "contentCreator": [false],
+                "musician": [false],
+                "gameDeveloper": [false]
+  };
 
-//Images in the OverviewSection.
-//Photography
-gsap.timeline({scrollTrigger: "#photo"})
-.to("#photoP", {letterSpacing:'4px', duration: 0.8, delay: 0.5, ease: CustomEase.create("easeInOutQuart", ".76,0,.24,1")})
-.from("#photoImg", {filter: 'blur(64px)', scale: 1, duration: 0.8,  ease: CustomEase.create("easeInOutQuad", "0,-0.04,0,1.05")})
-//Youtube
-gsap.timeline({scrollTrigger: "#yt"})
-.to("#ytP", {letterSpacing:'4px', duration: 0.8, delay: 0.5, ease: CustomEase.create("easeInOutQuart", ".76,0,.24,1")})
-.from("#ytImg", {filter: 'blur(64px)', scale: 1, duration: 0.8,  ease: CustomEase.create("easeInOutQuad", "0,-0.04,0,1.05")})
+  //functions
+//https://stackoverflow.com/questions/3559070/are-there-dictionaries-in-javascript-like-python Might eventually need a dictionary. (turns out, I did)
 
+function toggle(element) { //Fired when the button(element) is clicked.
+  //Finding the SubButtonDiv
+  let elementId = element.getAttribute("id") //"photographer"/"contentCreator" --thus, the HTML must abide by the naming conventions.
+  let elementDiv = elementId.toString()+"_SkillElementDiv" //synthesises the name of the SkillElement
+  let elementDivClass = document.getElementById(elementDiv).className.toString() //to slice
+  let elementDivClassSlice = elementDivClass.slice(0, 18) //to grab the name of the class. Should return: "subSkillElementDiv"
+  // console.log(document.getElementById(elementDiv)) //return selected Div where the SubElement buttons are.
+  // console.log(elementDivClassSlice)
+  document.getElementById(elementDiv).style.height = "auto" //to automatically calculate the height it should tween to.
+  document.getElementById(elementDiv).style.visibility = "visible"
+  document.getElementById(elementDiv).style.color = document.getElementById(element.getAttribute("id")).style.color //not working
 
+  function autoClose(active){ //to automatically close the other elements out of focus.
+    for (let i =0; i < any.length; i++){ //to loop any many times as the "any" list.
+      if (any[i].getAttribute("id") != active.getAttribute("id")){
+        stringVer = any[i].getAttribute("id")
+        states[any[i].getAttribute("id")][0] = false
+        // console.log("Closing:  "+stringVer)
+        gsap.to("."+stringVer+"_SkillElementDiv",{
+          ease: "power1.out",
+          duration: 1,
+          height: 0,
+          opacity: 0,
+        })
+      }
+    }
+  }
 
+ var skillElementTL = gsap.timeline()
+  if (states[elementId][0] == false) {
+    // console.log("False now True")
+    console.log(states[elementId][0])
+    skillElementTL.from("."+elementDivClassSlice, {
+      duration: 1,
+      ease: "power1.out",
+      height: 0, //The height to tween from.
+      onComplete: () => states[elementId][0] = true, //Record the element state.
+      onStart: () => autoClose(element)
+    });
+    skillElementTL.to("."+elementDivClassSlice,{
+      duration: 1,
+      ease: "power1.out",
+      opacity: 1, //the opaccity to tween to.
+    }, "<")
+  } else{
+    // console.log("True now False")
+    skillElementTL.to("."+elementDivClassSlice, {
+      duration: 1,
+      ease: "power1.out",
+      height: 0,
+      opacity: 0,
+      onComplete: () => states[elementId][0] = false, //Record the element state.
+    });
+    
+  }
+};//End of the "toggle" function
 
-}) ;
+//Events
+    any.forEach((element) => { //For each element in the array.
+      element.addEventListener("click", () => { //When the user clicks
+        toggle(element);
+      });
+      
+      element.addEventListener("mouseover", () => { //When the user hovers over the element- any button in this case
+        // console.log("element");
+        document.body.style.cursor = "url('/assets/images/altCurs.png'), auto"; //change the cursor
+      });
+      
+      element.addEventListener("mouseleave", () => { //When the user leaves the element
+        // console.log("element Left");
+        document.body.style.cursor = "default"; //change the cursor back to default
+      });
+    });
 
+ });
 
-
-
-//If placed on seperate lines, will play animations chronologically.
-//introAnim.from("#rhys", {opacity:0, duration: 2 , ease: 'Power1.easeInOut'})
-
-//Welcome Message. TEST
-//document.getElementById("welcomeMessage").innerHTML = "Welcome, " + navigator.userAgent + "."
-//.play() //Play the animation manually.
+ //Debug mode bc waiting for animations is boring.
+ function debugMode(){
+  console.log('%cDebug Mode.', 'color:red;font-size:large;'); //https://stackoverflow.com/questions/70991556/how-to-create-user-input-in-the-javascript-console
+ }
+ if (dMode == true){
+  debugMode()
+ }

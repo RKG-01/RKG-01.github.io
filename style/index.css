@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); /*Archivo Black*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); /*IBM*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    filter: sepia(0.05);
+    /* background-color: #080808; */
+    
+}
+
+.bod{
+    overflow-y: hidden;
+}
+
+.homeSection{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    justify-content: center; /*Horizontal*/
+    /* justify-items: center; */
+    align-items: center; /*Vertical*/
+    text-align: center;
+    background-color: #080808;
+    background-image:url("/assets/images/bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.sd{
+    color: white;
+    font-family: 'IBM plex mono';
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    padding-top: 1vh;
+    opacity: 0;
+}
+
+.secondSection{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    justify-content: center; /*Horizontal*/
+    /* justify-items: center; */
+    align-items: center; /*Vertical*/
+    text-align: center;
+    background-color: #f8f8f8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    color: #d8d8d8;
+    font-family: 'IBM plex mono';
+}
+
+.bang{
+ z-index: 1;
+ display: block;
+ position: absolute;
+}
+
+.secondSectionDiv{
+    margin-left: 1vw;
+    width: 99vw;
+    height: 100vh;
+    text-align: left;
+    opacity: 0;
+    position: absolute;
+}
+
+.subSecondSectionDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+    justify-content: center;
+    font-size: large;
+    align-items:center;
+    position: absolute; /*Both popupDiv and subSecondSectionDiv to be absolute for overlapping.*/
+}
+
+.skillElement{ /*Photographer, Content Creator...*/
+    width: max-content;
+    height: max-content;
+    padding-top: 10%;
+}
+
+.subSkillElementDiv{ /*Container holding subSkillElements*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*If the flex-direction was column.*/
+    /*justify-content: center;*/
+    /* z-index: -1; */
+    height: min-content;
+    width: inherit;
+    margin: 0;
+}
+
+.subSkillElement{ /*Real Life, Assetto Corsa...*/
+    /* z-index: -1; */
+    margin-top: 10%;
+}
+
+.introText{
+    color: white;
+    font-family: 'Archivo Black';
+    font-size: 24px;
+    margin-left: 30px;
+    width: 100%;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.introPara{
+    color: white;
+    font-family: 'IBM plex mono';
+    font-size: 16px;
+    width: 100%;
+    text-align: right;
+}
+
+.footer{
+    color: white;
+    font-family: 'IBM plex mono';
+    font-size: small;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    justify-content: left; /*Horizontal*/
+    /* justify-items: center; */
+    align-items:center; /*Vertical*/
+    text-align: left;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/assets/images/bg.jpg");
+    height: 50vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+
+
+/* For Desktop */
+@media screen and (min-width: 640px){
+    .subSecondSectionDiv{
+        padding-top: 144px;
+        height: 20vw;
+        align-items:unset;
+        
+    }
+
+    .skillElement{
+        width: max-content;
+        height: max-content;
+        padding-top: 1vw;
+        margin-left: 144px;
+    }
+
+    .subSkillElement{
+        margin-top: 2vw;
+    }
+
+    .popupDiv{
+        height: 50%;
+        width: 90%;
+    }
+}
