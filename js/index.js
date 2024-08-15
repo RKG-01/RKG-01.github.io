@@ -26,7 +26,7 @@ let dMode = false //Debug Mode
 
   if (screen.width <= 640){
     console.log("Small Screen")
-    lenis.start()
+    // lenis.start()
   }
   //End of Lenis stuff
 
