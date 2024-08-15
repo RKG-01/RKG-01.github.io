@@ -16,7 +16,7 @@ let dMode = false //Debug Mode
   lenis.on('scroll', ScrollTrigger.update)
 
   gsap.ticker.add((time)=>{
-    lenis.raf(time * 1000) // "tick" time for lenis? (provided by GSAP)
+    lenis.raf(time * 100000) // "tick" time for lenis? (provided by GSAP)
   })
   gsap.ticker.lagSmoothing(0)
   lenis.scrollTo(document.getElementById("introSection"))
@@ -191,5 +191,3 @@ function toggle(element) { //Fired when the button(element) is clicked.
  if (dMode == true){
   debugMode()
  }
-
- $(document).ready(function(){lenis.start();})
