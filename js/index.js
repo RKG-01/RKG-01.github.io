@@ -30,6 +30,9 @@ let dMode = false //Debug Mode
   }
   //End of Lenis stuff
 
+  let intropara = document.getElementById("introPara")
+  intropara.innerHTML = "Haha funny animations go brr."
+
   //Initial sequence of Animations.
     let tl = gsap.timeline()
     tl.to(".introText", {text: "Hello there, I'm Rhys.", duration: 3, delay: 1, ease: "power1.out"}, 1);
