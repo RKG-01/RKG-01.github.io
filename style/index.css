@@ -168,7 +168,7 @@
 /* For Desktop */
 @media screen and (min-width: 640px){
     .subSecondSectionDiv{
-        padding-top: 144px;
+        /* padding-top: 144px; */
         /* height: 20vw; */
         align-items:unset;
         
