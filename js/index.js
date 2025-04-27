@@ -98,14 +98,16 @@ let dMode = false //Debug Mode
 
   //Button Constants
   const photographer = document.getElementById("photographer");
-  const contentCreator = document.getElementById("contentCreator");
+  // const contentCreator = document.getElementById("contentCreator");
   const musician = document.getElementById("musician");
   const gameDeveloper = document.getElementById("gameDeveloper");
-  const any = [photographer, contentCreator, musician, gameDeveloper];  //List all of the constants to be detected as one- for events.
+  const videoEditor = document.getElementById("videoEditor");
+  const any = [photographer, /*contentCreator,*/ musician, gameDeveloper, videoEditor];  //List all of the constants to be detected as one- for events.
   let states = {"photographer": [false], //Dictionary to control button states.
-                "contentCreator": [false],
+                // "contentCreator": [false],
                 "musician": [false],
-                "gameDeveloper": [false]
+                "gameDeveloper": [false],
+                "videoEditor": [false]
   };
 
   //functions
