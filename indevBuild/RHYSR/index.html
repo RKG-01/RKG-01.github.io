@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhys.</title>
+
+    <link rel="stylesheet" href="/indevBuild/RHYSR/styles/index.css">
+    <link rel="stylesheet" href="/indevBuild/RHYSR/styles/indexCss/previewDiv.css">
+    <script src="/indevBuild/RHYSR/js/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
+
+    <script src="https://unpkg.com/lenis@1.3.13/dist/lenis.min.js"></script> 
+</head>
+<body id="body">
+    <section class="hero" id="hero">
+        <div class="topBar" id="topBar">
+            <a class="topbarElement" id="socials">Socials</a>
+            <a class="topbarElement" href="mailto:rhys@rhys-ree.com">Contact Me</a>
+        </div>
+        <div class="introDiv">
+            <h1 id="greeting" style="line-height: 1;">HELLO THERE, <br>I'M RHYS.</h1>
+        </div>
+        <p id="scrollRequest">Please scroll down.</p>
+    </section>
+    <section class="listSection">
+        <div class="listDiv">
+            <h1 class="listHeader">I'm a</h1>
+            <div class="listContainer">
+                <a class="listItem">Photographer</a>
+                <a class="listItem">Programmer</a>
+                <a class="listItem">Editor</a>
+                <a class="listItem">Graphic Designer</a>
+                <p class="listItem" style="font-size: 16px;">(cool person too, probably)</p>
+            </div>
+        </div>
+        <!-- Oh dear. I should rewrite this... -->
+        <div class="previewDiv"> 
+            <a style="width: fit-content; z-index: 3; text-decoration: underline;" id="previewReturn">Return to home page</a>
+            <div class="subPreviewDiv">
+                <div style="display: flex; width: max-content; height: min-content;">
+                    <h1 class="pdHeading" style="font-size: 50px;">I'm a</h1>
+                    <h1 class="pdHeading" style="margin-left: 20px; font-weight: lighter; transform: translateY(5px);" id="titleHeader">photographer</h1>
+                </div>
+                <div style="display:flex; flex:1; align-items: center; justify-content: end;">
+                    <p style="width: 30vw; text-align: end;" id="previewPara1">
+                        e
+                    </p>
+                </div>
+            </div>
+            <div class="projectsDiv">
+                <div>
+                    <h1>Projects:</h1>
+                </div>
+                <div class="projectsList" id="projectsList">
+                    <!-- <a class="projectsListItem">Real Life</a>
+                    <a class="projectsListItem">Assetto Corsa</a> -->
+                </div>
+            </div>
+            <div style="display: flex; position: fixed; width: 90%; height: 90%; flex-direction: column; align-items: end; justify-content: end;">
+                <div style="width: 50vw;text-align: end;">
+                    <p id="previewPara2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="listSection2">
+        <p></p>
+    </section>
+    <footer style="height: 50vh; width: 100vw; display: flex; flex-direction: column; z-index: 3; background-color: white;">
+        <div class="footerDiv">
+            <p>
+                Thank you for visiting my W.I.P website. Everything you see was coded by me! No website builders here. <br>
+                Made with ♥ from Trinidad & Tobago and the United Kingdom.
+            </p>
+            <div style="height: 50%;">
+                <a class="socialIconCont" href="https://www.youtube.com/@Rhys_Peeces" target="_blank">
+                    <img class="socialIcons" src="/media/social_icons/yt_icon_almostblack_digital.png">
+                </a>
+            </div>
+        </div>
+ 
+    </footer>
+</body>
+</html>

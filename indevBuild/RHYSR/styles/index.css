@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+    font-family: DT_Nightingale;
+    src: url(/indevBuild/RHYSR/styles/DTNightingale-Light.otf);
+}
+
+/* Design for mobile first. */
+
+body{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: white;
+    color: black;
+    font-family: "DT_Nightingale", serif;
+    /* height: 100vh;
+    width: 100vw; */
+}
+
+
+.topBar{
+    display: flex; flex-direction: row;
+    justify-content: center;
+    width: 100vw; height: min-content;
+    position: fixed;
+    margin-left: 5vw;
+    margin-bottom: 90vh;
+    z-index: 10;
+}
+
+.topbarElement{
+    padding-right: 5%;
+    font-family: inherit; color: inherit;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw; height: 100vh;
+    align-items:center;
+    justify-content: center;
+    font-family: "DT_Nightingale", serif;
+}
+
+.introDiv{
+    display: flex; flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#greeting{
+    font-size:45px;
+    font-weight: normal;
+}
+
+#scrollRequest{
+    font-weight:lighter;
+}
+
+
+/* Second Section */
+
+
+.listSection{
+    width: 100vw; height: 100vh; 
+    display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "DT_Nightingale", serif;
+    font-weight: normal;
+}
+
+.listDiv{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    font-weight: normal;
+    position: sticky;
+}
+
+.listContainer{
+    display: inherit; flex-direction: inherit;
+    width: unset;
+    margin-left: 0px;
+    z-index: 1;
+
+}
+
+.listItem{
+    font-size: 32px;
+    padding-bottom: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.listHeader{
+    font-size: 70px; 
+    width: 100vw;
+    text-align: center;
+    background-color: white;
+    z-index: 2;
+}
+
+.footerDiv{
+    padding: 10px;
+    height: 100%;
+}
+
+
+.socialIcons{
+    height: 64px;
+    /* width: 64px; */
+}
+/* For Desktop */
+
+@media (min-width: 600px){
+    .hero{
+        justify-content: center;
+        align-items: start;
+    }
+
+    .topBar{
+    display: flex; flex-direction: row;
+    justify-content: end;
+    width: 100vw; height: min-content;
+    position: fixed;
+    padding-right: 10vw;
+    margin-left: 0vw;
+    margin-bottom: 90vh;
+    }   
+    .topbarElement{
+        padding-right: 5vw;
+        font-size: 20px;
+        text-decoration: underline;
+        font-style: normal;
+    }
+
+    .introDiv{
+        text-align: start;
+        margin-left: 5vw;
+    } 
+
+    #greeting{
+        font-size: 64px;
+    }
+
+    
+    #scrollRequest{
+        /* position:absolute; */
+        position: fixed;
+        font-weight: normal;
+        font-size: 20px;
+        margin-top: 90vh;
+        width: 100%;
+        text-align: center;
+    }
+
+    .listSection{
+        width: 100vw; height: 100vh; 
+        position: relative;
+        display: flex; flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        text-align: center;
+        font-weight: normal;
+        font-size: 64px;
+    }
+
+    .listSection2{
+        width:100vw ;height: 200vh;
+        /* background-color: beige; */
+    }
+
+    .listDiv{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 5vw; */
+    }
+
+    .listContainer{
+        display: inherit;
+        align-items: center;
+        height: inherit;
+        justify-content: center;
+    }
+
+    .listItem{
+        font-size: 64px;
+        padding-left: 60px;
+        padding-bottom: 0px;
+    }
+
+    .listHeader{
+        font-size: 70px; 
+        width: 30vw; height: 100%;
+        margin: 0;
+        text-align: center;
+        vertical-align:top;
+        justify-content: center;
+        background-color: white;
+        z-index: 2;
+    }
+
+    .footerDiv{
+        font-size: 20px;
+        font-size: 16px;
+        font-family: "DT_Nightingale", serif;
+    }
+
+    .socialIconCont{
+        height: fit-content; 
+        width: fit-content; 
+        display: inline-block;
+    }
+
+    .socialIcons{
+        height: 100px;
+    }
+
+
+
+}
+
+
+::-moz-selection{
+    color: white;
+    background-color: black;
+}
+
+::selection{
+    color: white;
+    background-color: black;
+}

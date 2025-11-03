@@ -1,0 +1,66 @@
+.previewDiv{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw; height: 100vh;
+    background-color: white;
+    z-index: -1; /*Mobile development is pain.*/
+    opacity: 0;
+}
+.pdHeading{
+    font-size: 45px;
+    width: fit-content; text-align: start;
+}
+
+.subPreviewDiv{
+    display: flex;
+    flex-direction: row;
+    /* width: min-content; */
+}
+
+@media (min-width: 600px){
+    .previewDiv{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 90vw; height: 90vh;
+        background-color: white;
+        padding: 10vh;
+        font-size: 20px;
+    }
+    .pdHeading{
+        font-size: 45px;
+        width: fit-content; text-align: start;
+    }
+
+    .subPreviewDiv{
+        display: flex;
+        flex-direction: row;
+        /* width: min-content; */
+    }
+
+    .projectsDiv{
+        display: flex;
+        flex-direction: row;
+        text-align: start;
+        width: 50vw;
+        z-index: 300; /*Just to be safe...*/
+    }
+
+    .projectsList{
+        margin-top: 45px; /*Header height*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projectsListItem{
+        /* font-size: 20px; */
+        font-size: 40px;
+        margin-top: 40px;
+        color: black;
+        text-decoration: none;
+        /* margin: 0; */
+    }
+}
+
+
