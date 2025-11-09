@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Looking at my source code? Creep. (It's available on Github... @RKG-01) -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhys_Ree</title>
+    <link rel="icon" type="image/png" href="/favicon.png?v=2">
+    <link rel="stylesheet" href="/style/index.css?v=3">
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <!-- Lenis -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bespoke JS -->
+    <script src="/js/index.js?v=3"></script>
+    <!-- <script src="http://127.0.0.1:5500/js/index.js"></script> -->
+    <!-- First Impression -->
+    <script src="/js/firstImpression.js"></script>
+</head>
+<body id="bod" class="bod">
+    <!-- First Section -->
+    <section id="homeSection" class="homeSection">
+        <div id="introDiv" class="introDiv">
+        <h class="introText">Welcome.</h>
+        <p class="introPara" id="introPara">Loading...</p>
+        </div>
+
+        <p class="sd" id="sd">scroll down</p>
+    </section>
+    <!-- End of First Section -->
+    <!-- Second Section -->
+    <section class="secondSection" id="secondSection">
+        <p class="bang" id="bang">*Flashbang*</p>
+        <div class="secondSectionDiv" id="secondSectionDiv">
+            <div style="display: flex; margin-bottom: 5%; height: 10%; width: 100%; background-color:transparent;">
+                <h style="text-align: center; align-items: center; display: flex; width: 100%; justify-content: center;">Hello there, I'm Rhys. A 17-year-old who spends too much time alone.</h>
+            </div>
+            <h1 style="font-size: x-large;">I am a...</h1> 
+            <div class="subSecondSectionDiv" style="overflow-y: visible;"><!--DIV for the buttons. Remember to use the naming conventions.-->
+                <!-- The SubSkillElement class and id should be the main button id + "_SkillElementDiv" -->
+                <a class="skillElement hover:text-red-700 hover:translate-x-3 transition ease-in-out" id="photographer" style="margin-top: +10%;">Photographer</a> <!-- The Main Button -->
+                <div class="subSkillElementDiv photographer_SkillElementDiv" id="photographer_SkillElementDiv" style="height: 0; opacity: 0; visibility: hidden;"> <!-- SkillElementContainer -->
+                    <a class="subSkillElement hover:text-red-700 hover:translate-x-3 transition ease-in-out" href="https://www.rhys-ree.com/pages/photography/assettoCorsa">>Assetto Corsa.</a> <!-- This is a subSkillElement -->
+                    <a class="subSkillElement hover:text-red-700 hover:translate-x-3 transition ease-in-out" href="https://www.rhys-ree.com/pages/photography/RealLife">>Real Life.</a> 
+
+                </div>
+                <!-- <a class="skillElement hover:text-green-700 hover:translate-x-3 transition ease-in-out" id="contentCreator">Content Creator</a>
+                <div class="subSkillElementDiv contentCreator_SkillElementDiv" id="contentCreator_SkillElementDiv" style="height: 0; opacity: 0; visibility: hidden;">
+                    <a class="subSkillElement hover:text-green-700 hover:translate-x-3 transition ease-in-out" href="https://www.youtube.com/@Rhys_Ree" target="_blank">>@Rhys_Ree</a>
+                    <a class="subSkillElement hover:text-green-700 hover:translate-x-3 transition ease-in-out">>@Rhys_Peeces</a>
+                </div> -->
+                <a class="skillElement hover:text-blue-700 hover:translate-x-3 transition ease-in-out" id="gameDeveloper">Game Developer</a>
+                <div class="subSkillElementDiv gameDeveloper_SkillElementDiv" id="gameDeveloper_SkillElementDiv" style="height: 0; opacity: 0; visibility: hidden;">
+                    <!-- <a class="subSkillElement hover:text-blue-700 hover:translate-x-3 transition ease-in-out">>Komorebi</a>
+                    <a class="subSkillElement hover:text-blue-700 hover:translate-x-3 transition ease-in-out">>Ro-Box</a> -->
+                    <a class="subSkillElement hover:text-blue-700 hover:translate-x-3 transition ease-in-out">>W.I.P</a>
+                </div>
+                <a class="skillElement hover:text-violet-600 hover:translate-x-3 transition ease-in-out" id="videoEditor">Video Editor</a>
+                <div class="subSkillElementDiv videoEditor_SkillElementDiv" id="videoEditor_SkillElementDiv" style="height: 0; opacity: 0; visibility: hidden;">
+                    <!-- <a class="subSkillElement hover:text-blue-700 hover:translate-x-3 transition ease-in-out">>Komorebi</a>
+                    <a class="subSkillElement hover:text-blue-700 hover:translate-x-3 transition ease-in-out">>Ro-Box</a> -->
+                    <a class="subSkillElement hover:text-violet-600 hover:translate-x-3 transition ease-in-out">>W.I.P</a>
+                </div>
+                <a class="skillElement hover:text-yellow-700 hover:translate-x-3 transition ease-in-out" id="musician">Musician</a> 
+                <div class="subSkillElementDiv musician_SkillElementDiv" id="musician_SkillElementDiv" style="height: 0; opacity: 0; visibility: hidden;">
+                    <!-- <a class="subSkillElement">>Lofi</a> -->
+                    <a class="subSkillElement hover:text-yellow-700 hover:translate-x-3 transition ease-in-out">>W.I.P</a>
+                    <!-- <a class="subSkillElement">>Electronic</a> -->
+                </div>
+                <p style="font-size: small;"  class="skillElement">(And a cool person too, probably)</p>
+            </div>
+    </section>
+
+    <!-- <section class="thirdSection secondSection">
+        <h>Hello there, I'm Rhys. A 17-year-old who spends too much time alone.</h>
+    </section> -->
+    <!-- End of Section Section -->
+
+    <!-- Footer.IK THERES A FOOTER ELEMENT JUST LET ME BE-->
+    <section class="footer" id="footer">
+        <div style="display: flex; flex-direction: column-reverse; margin-top: 5%;"></div> <!--Spacing-->
+        <div class="footerDiv">
+            <p style="width: fit-content; text-align: left;">Thank you for visiting my W.I.P website. Everything you see was coded by me! No website builders here.<br>
+                Made with ♥ from Trinidad & Tobago and the United Kingdom.
+            </p>
+        
+            <p style="width: max-content; display: flex; margin-top: 5%;">Here are my socials:</p>
+            <div style=" width: 100vw; display: flex; justify-content: left; align-items: center;">
+                <a href="https://www.youtube.com/@Rhys_Ree" target="_blank"  style="width: 64px;">
+                    <img src="/assets/images/yt_icon_rgb.png" alt="Youtube Logo" style="width: inherit; height: auto; margin-right: 20px;">
+                </a>
+                <a href="https://twitter.com/REEE_Rhys" target="_blank" style="width: 47px; margin-left: 20px;">
+                    <img src="/assets/images/twitter-logo-white.png" alt="X Logo" style="width: inherit; height: auto; margin-right: 20px;">
+                </a>
+                <a href="mailto:mail.rhys.business@gmail.com" target="_blank" style="width: 64px; margin-left: 20px;">
+                    <img src="/assets/images/Gmail_Icon.original.png" alt="Gmail Logo" style="width: inherit; height: auto; margin-right: 20px;">
+                </a>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

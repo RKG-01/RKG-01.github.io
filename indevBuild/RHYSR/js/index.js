@@ -116,13 +116,16 @@ document.addEventListener("DOMContentLoaded", (event) =>{
         console.log(projectList)
         let previewLinks = {
             "Photographer": [
-                ["Real Life", "Assetto Corsa"],["Photos taken IRL.", "Photos taken through a modified instance of the Assetto Corsa game engine."],["pages/photography.html", "youtube.com"]
+                ["Real Life", "Assetto Corsa"],["Photos taken In Real Life.", "Photos taken through a modified instance of the Assetto Corsa game engine."],["/indevBuild/RHYSR/pages/photography/realLife.html", "/indevBuild/RHYSR/pages/photography/assettoCorsa.html"]
             ],
             "Programmer": [
-                ["KOMOREBI.", "Project: ATLAS.", "Rhys-Ree.com", "Just Drive"],["A revolutionary project designed for the Roblox Game Engine.", "The IRIS Project: Institute of Research in Schools.", "My Personal Website", 'From my time as a Senior Developer @ Synthwave Interactive'],["pages/photography.html", "youtube.com", "", ""]
+                ["KOMOREBI.", "Project: ATLAS.", "Rhys-Ree.com", "Just Drive"],["A revolutionary project designed for the Roblox Game Engine.", "From The IRIS Project: Institute of Research in Schools.", "My Personal Website.", 'From my time as a Senior Developer @ Synthwave Interactive.'],["", "", "", ""]
             ],
             "Editor": [
-                ["Ruff"],["A self-improvement Youtuber. I chose to work with him because of his previous editing style."],[""]
+                ["Ruff"],["A Youtuber aimed towards students. My edited videos have accumulated over 1 Million Views."],["https://www.youtube.com/@ItsMeRuff"]
+            ],
+            "Graphic Designer": [
+                ["Random Projects"],["Learning."],["/indevBuild/RHYSR/pages/graphics.html"]
             ],
         }
 
